@@ -1,0 +1,35 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/JosefinSans-Regular.ttf);
+ }
+ 
+ * {
+    font-family: myFirstFont;
+ }
+
+.form{
+    background-color: #F5F5F5;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-style: solid;
+    width: 500px;
+}
+
+.texts{
+    color: #282C35;
+}
+
+.heading{
+    text-align: center;
+}
+
+.box{
+    display: block;
+    text-align: center;
+}
+
+.errormssg{
+    color: red;
+}

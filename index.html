@@ -1,0 +1,79 @@
+<! DOCTYPE html >
+
+
+<html>
+    <head>
+        <title>Volunteer Program - Sign Up</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Volunteer Program Sign Up">
+        <meta name="author" content="Navaneeth">
+        <link rel='stylesheet' href='Stylesheets/mystyle.css'>
+
+            <script type="text/javascript" src='Script/myscript.js'></script>
+    </head>
+    <body onload = "hidefield(); disableSubmit()">
+       <h1 class="heading"><u>Volunteer Program</u></h1>
+
+        <div class='box'>
+        
+        
+        <form class ='form' name="RegForm" action="#" onSubmit="alert('Thank You');" method="post">
+            <h2 class='texts' style="text-align: center;"><u>Sign Up</u></h2>
+            <label for="fname" class='texts'>First name:<span style="color:red">*</span></label><br>
+            <input type="text" id="fname" name="fname" required onblur="fnameValidate();" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"><br>
+            <div class='errormssg' id="fnameError"></div>
+
+            <label for="lname" class='texts'>Last name:<span style="color:red">*</span></label><br>
+            <input type="text" id="lname" name="lname" required onblur="lnameValidate();" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"><br>
+            <div class='errormssg' id="lnameError"></div>
+
+            <label for="email" class='texts'>Email:<span style="color:red">*</span></label><br>
+            <input type="email" id="email" name="email" required onblur="emailValidate();"><br>
+            <div class='errormssg' id="emailError"></div>
+
+            <label for="age" class='texts'>Age:<span style="color:red">*</span></label><br>
+            <input type="number" id="age" name="age" min="18" required onblur="ageValidate();"><br>
+            <div class='errormssg' id="ageError"></div>
+
+            <label for="carrier" class='texts'>Mobile Carrier:<span style="color:red">*</span></label>
+
+            <select id="carrier" name="carrier" required>
+                <option value="airtel" class='texts'>Airtel</option>
+                <option value="jio" class='texts'>Jio</option>
+                <option value="idea" class='texts'>Idea</option>
+                <option value="bsnl" class='texts'>Bsnl</option>
+            </select><br><br>
+
+            <label for="license" class='texts'>Do you have a motor vehicle license? :<span style="color:red">*</span></label>
+            <select id="license" name="license" onchange="showfield(this.options[this.selectedIndex].value)" required>
+                <option value="no" selected>No</option>
+                <option value="yes">yes</option>
+            </select>
+
+            <div id="div1">
+                <label for="vehicletype" class='texts'>Type of vehicle :<span style="color:red">*</span></label>
+                <select id="vehicletype" name="vehicletype" required>
+                    <option value="2 wheeler" class='texts'>2 Wheeler</option>
+                    <option value="4 wheeler" class='texts'>4 Wheeler</option>
+                </select>
+            </div><br><br>
+                <label for="find" class='texts'>How did you find out about us? :<span style="color:red">*</span></label>
+                <select id="find" name="find" required>
+                    <option value="internet" class='texts'>Internet</option>
+                    <option value="friends" class='texts'>Friends</option>
+                    <option value="television" class='texts'>Television</option>
+                    <option value="socialmedia" class='texts'>Social Media</option>
+                    <option value="other" class='texts'>Other</option>
+                </select><br><br>
+                <label for="skills" class='texts'> Skills you can offer :</label><br>
+                <textarea name="skills" rows="10" cols="30"></textarea><br>
+                <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)" class='texts' required>  I Agree Terms & Coditions
+                <br><br>
+                  <input type="submit" name="submit" id="submit" onclick="success();" required>
+                  <div id='success-message'> </div>
+                  </div>
+        </form>
+    </div>
+    </body>
+</html>
