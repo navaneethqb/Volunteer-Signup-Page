@@ -18,7 +18,9 @@
         <div class='box'>
         
         
-        <form class ='form' name="RegForm" onSubmit="alert('Thank You');" method="post">
+
+
+        <form class ='form' name="RegForm" onSubmit="alert('Thank You'); window.location = 'index.html';" method="POST">
             <h2 class='texts' style="text-align: center;"><u>Sign Up</u></h2>
             <label for="fname" class='texts'>First name:<span style="color:red">*</span></label><br>
             <input type="text" id="fname" name="fname" required onblur="fnameValidate();" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"><br>
